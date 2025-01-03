@@ -1,0 +1,183 @@
+home.html
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSICAL REGISTRATION PAGE</title>
+    <style>
+        .background{
+            background-image: url('inst.jpg');
+            width:100vw;
+            height:100vh;
+        }
+    </style>
+</head>
+<body>
+    <marquee style="font-family: 'Lobster', cursive; font-size: 20px; color: #FFD700; background: linear-gradient(90deg, #000, #444); padding: 10px;">
+         Welcome to the MUSICAL FEISTA Registration! Get Ready to Experience Unforgettable Music! 
+     </marquee>
+     <div class="background">
+     <h2 style="font-family: 'Lobster',cursive;font-size: 25px;color: crimson;text-align: center;">REGISTER TO ENJOY TONIGHT</h2>
+     <a href="musical.html"  target="content"><h2 style="font-family: 'Lobster',cursive;font-size: 25px;color: crimson;text-align: center;"> REGISTER </h2></a> <br/><br/> 
+    </div>
+    
+</body>
+</html>
+
+
+
+
+      index.html
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+</head>
+<body>
+
+    <iframe name="title" src="Title.html" height="250px" width="1490px">
+    </iframe> <br/>
+
+    <iframe name="navbar" src="Navigation.html" height="460px" width="200px">
+    </iframe>
+
+    <iframe name="content" src="Home.html" height="460px" width="1284px">
+    </iframe>
+</body>
+</html>
+
+
+
+
+      musical.html
+
+
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Concert Registration Form</title>
+    <style>
+    .registration-form1 {
+        background-image: url('concerts.jpg'); 
+        width:100vw;
+        height:100vh;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+    }
+    .registration-form {
+        background-color: color-mix(in hsl, lightblue 50%, pink 50%);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        margin: auto;
+    }
+    .registration-form h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+    }
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .form-group input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    .form-group input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    .success-message {
+        color: green;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="registration-form1">
+        <h2 style="text-shadow: #333;color:rgb(215, 244, 52);text-align: center;font-size:50px;font-family: cursive;">Musical Feista</h2>
+    
+        <div class="registration-form">
+            <h2>Registration</h2>
+            <form id="registrationForm" action="#" method="post" onsubmit="return showSuccessMessage(event)">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <select id="date" name="date" required>
+                        <option value="day1">20-11-2024</option>
+                        <option value="day2">21-11-2024</option>
+                        <option value="day3">22-11-2024</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="ticket">Ticket Type</label>
+                    <select id="ticket" name="ticket" required>
+                        <option value="regular">Regular - $50</option>
+                        <option value="vip">VIP - $100</option>
+                        <option value="vvip">VVIP - $150</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+            <div id="successMessage" class="success-message" style="display: none;">
+                Registration Successful!
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSuccessMessage(event) {
+            event.preventDefault(); // Prevent form from submitting to server
+            document.getElementById("successMessage").style.display = "block"; // Display success message
+            setTimeout(function() {
+                document.getElementById("successMessage").style.display = "none"; // Hide success message after 5 seconds
+            }, 5000); // 5000 milliseconds = 5 seconds
+            document.getElementById("registrationForm").reset(); // Reset form fields
+        }
+    </script>
+</body>
+</html>
+
+      concerts.jpg
+      inst.jpg
